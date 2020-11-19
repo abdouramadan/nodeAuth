@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const port     = 3000
 const router = require('./route/authRoutes')
 const bodyParser    = require('body-parser')
-const cokkieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
 
 const app = express();
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
-app.use(cokkieParser())
+app.use(cookieParser())
 
 // view engine
 app.set('view engine', 'ejs');
