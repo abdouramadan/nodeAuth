@@ -4,7 +4,7 @@ const User = require('../models/User')
 const handleErrors = (err) =>
 {
 
-    console.log(err.message, err.code)
+    // console.log(err.message, err.code)
     let errors = {email: '', password: ''}
 
     if(err.code === 11000)
